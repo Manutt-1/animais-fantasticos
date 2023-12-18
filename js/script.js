@@ -5,9 +5,9 @@ import Modal from './module/modal.js';
 import Tooltip from './module/tooltip.js';
 import DropdownMenu from './module/dropdown-menu.js';
 import MenuMobile from './module/menu-mobile.js';
-import initFuncionamento from './module/funcionamento.js';
 import fetchAnimais from './module/fetch-animais.js';
 import fetchBitcoin from './module/fetch-bitcoin.js';
+import Funcionamento from './module/funcionamento.js';
 import initAnimacaoScroll from './module/scroll-animacao.js';
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
@@ -31,7 +31,9 @@ dropdownMenu.init();
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
-initFuncionamento();
+const funcionamento = new Funcionamento('[data-semana]', 'aberto');
+funcionamento.init();
+
 initAnimacaoScroll();
 
 fetchAnimais('../../animaisapi.json', '.numeros-grid');
